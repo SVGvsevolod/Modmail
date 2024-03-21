@@ -1,7 +1,7 @@
 var Discord = require("discord.js");
 var fileSystem = require("fs");
 
-var tickets = require("./tickets.json");
+var tickets = require("../tickets.json");
 
 var client = new Discord.Client({
     partials: [Discord.Partials.Channel],
@@ -150,7 +150,7 @@ client.on("interactionCreate", async a => {
 
         }
         
-        fileSystem.writeFile("modmail/tickets.json", JSON.stringify(tickets), () => {
+        fileSystem.writeFile("tickets.json", JSON.stringify(tickets), () => {
 
         });
     }
@@ -290,7 +290,7 @@ client.on("messageCreate", async a => {
                     : "Your message was delivered successfully."
             );
             
-            fileSystem.writeFile("modmail/tickets.json", JSON.stringify(tickets), () => {
+            fileSystem.writeFile("tickets.json", JSON.stringify(tickets), () => {
 
             });
         }
