@@ -165,6 +165,6 @@ client.on("messageCreate", async a => {
 
 client.on("ready",status);
 
-client.login("MTAzNjkyMzQzOTgxNjEzNDc1MA.GYTjCU.zugT7RmvXU3jtrYKt5usyNgpzGMVKSz-vsv02A");
+client.login("");
 
 module.exports = {Discord, tickets, client, status};
